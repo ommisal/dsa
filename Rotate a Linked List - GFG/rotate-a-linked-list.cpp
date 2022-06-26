@@ -34,14 +34,14 @@ class Solution
     Node* rotate(Node* head, int k)
     {
         // Your code here
-        int count=0;
+        int count=1;
         Node* temp = head;
         while(temp->next!=NULL)
         {
             count++;
             temp = temp->next;
         }
-        //temp = head;
+        // temp = head;
         // if(k==count)
         //     return head;
         temp->next = head;
@@ -52,6 +52,7 @@ class Solution
             head = head->next;
         }
         curr->next = NULL;
+       // cout<<count<<endl;
         return head;
     }
 };
