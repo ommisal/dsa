@@ -23,7 +23,7 @@ public:
             prev = curr;
             curr = nxt;
         }
-        head = prev;
-        return head;
+       // head = prev;
+        return prev;
     }
 };
