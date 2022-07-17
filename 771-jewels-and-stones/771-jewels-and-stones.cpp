@@ -3,17 +3,13 @@ public:
     int numJewelsInStones(string jewels, string stones) {
         int n = jewels.size();
         int m = stones.size();
-        set<char> st;
         int count = 0;
-        for(int i=0;i<n;i++)
-        {
-            st.insert(jewels[i]);
-        }
         for(int i=0;i<m;i++)
         {
-            if(st.find(stones[i])!=st.end())
+            for(int j=0;j<n;j++)
             {
-                count++;
+                if(jewels[j]==stones[i])
+                    count++;
             }
         }
         return count;
